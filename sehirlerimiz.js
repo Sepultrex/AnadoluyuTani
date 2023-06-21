@@ -32,30 +32,4 @@ function setZIndexForRegion(regionIndex) {
   }
 }
 
-function marmara() {
-  setZIndexForRegion(1);
-}
 
-function karadeniz() {
-  setZIndexForRegion(2);
-}
-
-function ege() {
-  setZIndexForRegion(3);
-}
-
-function ic() {
-  setZIndexForRegion(4);
-}
-
-function dogu() {
-  setZIndexForRegion(5);
-}
-
-function akdeniz() {
-  setZIndexForRegion(6);
-}
-
-function guney() {
-  setZIndexForRegion(7);
-}
