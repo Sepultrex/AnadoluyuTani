@@ -1,161 +1,35 @@
-const carousel = new bootstrap.Carousel('#myCarousel')
+const elementIds = ["resim1", "resim2", "resim3", "resim4", "resim5", "resim6", "resim7", "resim8"];
+const btnIds = ["btn1", "btn2", "btn3", "btn4", "btn5", "btn6", "btn7"];
+
+function setZIndex(elementId, zIndex) {
+  document.getElementById(elementId).style.zIndex = zIndex;
+}
 
 function disarda() {
-	document.getElementById("resim1").style.zIndex = "-1";
-	document.getElementById("resim2").style.zIndex = "-2";
-	document.getElementById("resim3").style.zIndex = "-2";
-	document.getElementById("resim4").style.zIndex = "-2";
-	document.getElementById("resim5").style.zIndex = "-2";
-	document.getElementById("resim6").style.zIndex = "-2";
-	document.getElementById("resim7").style.zIndex = "-2";
-	document.getElementById("resim8").style.zIndex = "-2";
-	document.getElementById("btn1").style.zIndex = "1";
-	document.getElementById("btn2").style.zIndex = "1";
-	document.getElementById("btn3").style.zIndex = "1";
-	document.getElementById("btn4").style.zIndex = "1";
-	document.getElementById("btn5").style.zIndex = "1";
-	document.getElementById("btn6").style.zIndex = "1";
-	document.getElementById("btn7").style.zIndex = "1";
-	document.getElementById("column").style.zIndex = "-3";
-	document.getElementById("column1").style.zIndex = "-3";
-	document.getElementById("column2").style.zIndex = "-3";
-	document.getElementById("column3").style.zIndex = "-3";
-	document.getElementById("column4").style.zIndex = "-3";
-	document.getElementById("column5").style.zIndex = "-3";
-	document.getElementById("column6").style.zIndex = "-3";
-	document.getElementById("column7").style.zIndex = "-3";
-	document.getElementById("column8").style.zIndex = "-3";
-	document.getElementById("column9").style.zIndex = "-3";
-	document.getElementById("column10").style.zIndex = "-3";
-	document.getElementById("column11").style.zIndex = "-3";
-	document.getElementById("column12").style.zIndex = "-3";
-	document.getElementById("column13").style.zIndex = "-3";
-	document.getElementById("column14").style.zIndex = "-3";
-	document.getElementById("column15").style.zIndex = "-3";
-	document.getElementById("column16").style.zIndex = "-3";
-	document.getElementById("column17").style.zIndex = "-3";
-	document.getElementById("column18").style.zIndex = "-3";
-	document.getElementById("column19").style.zIndex = "-3";
-	document.getElementById("column20").style.zIndex = "-3";
-	document.getElementById("column21").style.zIndex = "-3";
-	document.getElementById("column22").style.zIndex = "-3";
-	document.getElementById("column23").style.zIndex = "-3";
-	document.getElementById("column24").style.zIndex = "-3";
-	document.getElementById("column25").style.zIndex = "-3";
-	document.getElementById("column26").style.zIndex = "-3";
-	document.getElementById("column27").style.zIndex = "-3";
+  for (let i = 0; i < elementIds.length; i++) {
+    setZIndex(elementIds[i], "-2");
+  }
 
+  for (let i = 0; i < btnIds.length; i++) {
+    setZIndex(btnIds[i], "1");
+  }
+
+  for (let i = 0; i <= 27; i++) {
+    document.getElementById("column" + i).style.zIndex = "-3";
+  }
 }
 
-function marmara() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim2").style.zIndex = "-1";
-	document.getElementById("btn2").style.zIndex = "-3";
-	document.getElementById("btn3").style.zIndex = "-3";
-	document.getElementById("btn4").style.zIndex = "-3";
-	document.getElementById("btn5").style.zIndex = "-3";
-	document.getElementById("btn6").style.zIndex = "-3";
-	document.getElementById("btn7").style.zIndex = "-3";
-	document.getElementById("column").style.zIndex = "1";
-	document.getElementById("column1").style.zIndex = "1";
-	document.getElementById("column2").style.zIndex = "1";
-	document.getElementById("column3").style.zIndex = "1";
+function setZIndexForRegion(regionIndex) {
+  setZIndex("resim1", "-2");
+  setZIndex(elementIds[regionIndex], "-1");
+
+  for (let i = 0; i < btnIds.length; i++) {
+    setZIndex(btnIds[i], "-3");
+  }
+
+  for (let i = 0; i <= 3; i++) {
+    setZIndex("column" + (i + regionIndex * 4), "1");
+  }
 }
 
-function karadeniz() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim3").style.zIndex = "-1";
-	document.getElementById("btn1").style.zIndex = "-3";
-	document.getElementById("btn2").style.zIndex = "1";
-	document.getElementById("btn3").style.zIndex = "-3";
-	document.getElementById("btn4").style.zIndex = "-3";
-	document.getElementById("btn5").style.zIndex = "-3";
-	document.getElementById("btn6").style.zIndex = "-3";
-	document.getElementById("btn7").style.zIndex = "-3";
-	document.getElementById("column4").style.zIndex = "1";
-	document.getElementById("column5").style.zIndex = "1";
-	document.getElementById("column6").style.zIndex = "1";
-	document.getElementById("column7").style.zIndex = "1";
-}
 
-function ege() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim4").style.zIndex = "-1";
-	document.getElementById("btn1").style.zIndex = "-3";
-	document.getElementById("btn2").style.zIndex = "-3";
-	document.getElementById("btn3").style.zIndex = "1";
-	document.getElementById("btn4").style.zIndex = "-3";
-	document.getElementById("btn5").style.zIndex = "-3";
-	document.getElementById("btn6").style.zIndex = "-3";
-	document.getElementById("btn7").style.zIndex = "-3";
-	document.getElementById("column8").style.zIndex = "1";
-	document.getElementById("column9").style.zIndex = "1";
-	document.getElementById("column10").style.zIndex = "1";
-	document.getElementById("column11").style.zIndex = "1";
-
-}
-
-function ic() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim5").style.zIndex = "-1";
-	document.getElementById("btn1").style.zIndex = "-3";
-	document.getElementById("btn2").style.zIndex = "-3";
-	document.getElementById("btn3").style.zIndex = "-3";
-	document.getElementById("btn4").style.zIndex = "1";
-	document.getElementById("btn5").style.zIndex = "-3";
-	document.getElementById("btn6").style.zIndex = "-3";
-	document.getElementById("btn7").style.zIndex = "-3";
-	document.getElementById("column12").style.zIndex = "1";
-	document.getElementById("column13").style.zIndex = "1";
-	document.getElementById("column14").style.zIndex = "1";
-	document.getElementById("column15").style.zIndex = "1";
-
-}
-
-function dogu() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim6").style.zIndex = "-1";
-	document.getElementById("btn1").style.zIndex = "-3";
-	document.getElementById("btn2").style.zIndex = "-3";
-	document.getElementById("btn3").style.zIndex = "-3";
-	document.getElementById("btn4").style.zIndex = "-3";
-	document.getElementById("btn5").style.zIndex = "1";
-	document.getElementById("btn6").style.zIndex = "-3";
-	document.getElementById("btn7").style.zIndex = "-3";
-	document.getElementById("column16").style.zIndex = "1";
-	document.getElementById("column17").style.zIndex = "1";
-	document.getElementById("column18").style.zIndex = "1";
-	document.getElementById("column19").style.zIndex = "1";
-}
-
-function akdeniz() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim7").style.zIndex = "-1";
-	document.getElementById("btn1").style.zIndex = "-3";
-	document.getElementById("btn2").style.zIndex = "-3";
-	document.getElementById("btn3").style.zIndex = "-3";
-	document.getElementById("btn4").style.zIndex = "-3";
-	document.getElementById("btn5").style.zIndex = "-3";
-	document.getElementById("btn6").style.zIndex = "1";
-	document.getElementById("btn7").style.zIndex = "-3";
-	document.getElementById("column20").style.zIndex = "1";
-	document.getElementById("column21").style.zIndex = "1";
-	document.getElementById("column22").style.zIndex = "1";
-	document.getElementById("column23").style.zIndex = "1";
-}
-
-function guney() {
-	document.getElementById("resim1").style.zIndex = "-2";
-	document.getElementById("resim8").style.zIndex = "-1";
-	document.getElementById("btn1").style.zIndex = "-3";
-	document.getElementById("btn2").style.zIndex = "-3";
-	document.getElementById("btn3").style.zIndex = "-3";
-	document.getElementById("btn4").style.zIndex = "-3";
-	document.getElementById("btn5").style.zIndex = "-3";
-	document.getElementById("btn6").style.zIndex = "-3";
-	document.getElementById("btn7").style.zIndex = "1";
-	document.getElementById("column24").style.zIndex = "1";
-	document.getElementById("column25").style.zIndex = "1";
-	document.getElementById("column26").style.zIndex = "1";
-	document.getElementById("column27").style.zIndex = "1";
-}
